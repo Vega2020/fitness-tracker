@@ -22,11 +22,15 @@ app.listen(PORT, () => {
 });
 
 //just build routes inside of here for now
-// respond with "hello world" when a GET request is made to the homepage
+
+//send exercise.html when the /exercise api route is called
 app.get('/exercise', function (req, res) {
     res.sendFile(path.join(__dirname,'./public/exercise.html'))
   });
 
+// send stats.html when the /stats api route is called
   app.get('/stats', function (req, res) {
     res.sendFile(path.join(__dirname,'./public/stats.html'))
   });
+
+  
